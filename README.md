@@ -28,3 +28,19 @@ pip install -r requirements.txt
 ```
 Execute o run.bat ou run.bash
 ```
+
+## Mudanças possíveis
+
+Acesse o código .bat ou .bash e altere seguindo o padrão:
+```
+start python .\BV.py *ip* *porta*
+start python .\Robo_B.py *ip* *porta* *ip:porta(BV)*
+start python .\Banco_B_HB1.py *ip* *porta* *ip:porta(Robo)*
+```
+Ex:
+
+```
+start python .\BV.py 192.168.15.67 5000
+start python .\Robo_B.py 192.168.15.67 3000 192.168.15.67:5000
+start python .\Banco_B_HB1.py 192.168.15.67 3500 192.168.15.67:3000
+```
