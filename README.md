@@ -1,9 +1,9 @@
 # Integrantes
 
-1 - Amanda de Sousa Martins           R.A: 22.120.004-1<br>
-2 - Kawê Vinicius Barboza de Carvalho R.A: 22.120.018-1<br>
-3 - Nicolas Moretti Trevizam          R.A: 22.120.011-6<br>
-4 - Rafael Carraro Martins            R.A: 22.120.025-6<br>
+1 - Amanda de Sousa Martins           R.A: 22.120.004-1<br><br>
+2 - Kawê Vinicius Barboza de Carvalho R.A: 22.120.018-1<br><br>
+3 - Nicolas Moretti Trevizam          R.A: 22.120.011-6<br><br>
+4 - Rafael Carraro Martins            R.A: 22.120.025-6<br><br>
 
 # Simulação de uma Bolsa de Valores com Home Brokers
 
