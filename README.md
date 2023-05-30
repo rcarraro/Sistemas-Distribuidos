@@ -37,6 +37,9 @@ start python .\BV.py *ip* *porta*
 start python .\Robo_B.py *ip* *porta* *ip:porta(BV)*
 start python .\Banco_B_HB1.py *ip* *porta* *ip:porta(Robo)*
 ```
+
+>Vale lembrar que o número de robôs e homebrokers, pode ser aumentado infinitamente, basta seguir o padrão de ip e, não repetir nenhuma porta.
+
 Ex:
 
 ```
