@@ -57,15 +57,13 @@ Ex:
 Description=Run
 StartLimitIntervalSec=0
 [Service]
-Type=simple
-Restart=always
-RestartSec=tempo_restart
 User=root
 ExecStart=sudo bash ./caminho_até_arquivo_git/run.sh
 
 [Install]
 WantedBy=multi-user.target
 ```
+>Vale lembrar que tem que arrumar o caminho dos arquivos python também
 
 Adicione o seu serviço:
 ```
