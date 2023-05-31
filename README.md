@@ -7,7 +7,8 @@
 
 # Simulação de uma Bolsa de Valores com Home Brokers
 
-Este projeto tem como objetivo simular uma bolsa de valores, fornecendo uma interface de usuário através de um sistema de home brokers.
+Este projeto tem como objetivo simular uma bolsa de valores, fornecendo uma interface de usuário através de um sistema de home brokers.<br>
+Testes realizados em ambiente *Windows*
 
 ## Instalação
 
