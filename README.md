@@ -6,6 +6,23 @@
 4 - Rafael Carraro Martins            R.A: 22.120.025-6<br><br>
 
 # Testes realizados em ambiente *Windows*
+
+Como demonstrado nas logs de compra, o ip das solicitações é diferente<br>
+Maneira como foi ajustada:<br>
+Máquina 1 (Winodws):
+```
+pip install -r .\requirements.txt
+start python .\BV.py 192.168.15.40 5000
+start python .\Robo_N.py 192.168.15.40 3500 192.168.15.40:5000
+start python .\Banco_N_HB.py 192.168.15.40 3000 192.168.15.40:3500
+```
+
+Máquina 2 (Winodws):
+```
+start python .\Robo_N.py 192.168.15.168 2500 192.168.15.40:5000
+start python .\Banco_N_HB.py 192.168.15.168 2000 192.168.15.168:2500
+```
+
 # Simulação de uma Bolsa de Valores com Home Brokers
 
 Este projeto tem como objetivo simular uma bolsa de valores, fornecendo uma interface de usuário através de um sistema de home brokers.<br>
