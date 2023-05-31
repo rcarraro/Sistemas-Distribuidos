@@ -7,9 +7,6 @@ from threading import Thread
 import time
 import sys
 
-
-
-
 ip = str(sys.argv[1])
 porta = int(sys.argv[2])
 lista = {}

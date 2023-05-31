@@ -1,6 +1,6 @@
 pip install -r .\requirements.txt
-start python .\BV.py 192.168.15.67 5000
-start python .\Robo_N.py 192.168.15.67 3000 192.168.15.67:5000
-start python .\Banco_N_HB.py 192.168.15.67 3500 192.168.15.67:3000
-start python .\Robo_N.py 192.168.15.67 4000 192.168.15.67:5000
-start python .\Banco_N_HB.py 192.168.15.67 4500 192.168.15.67:4000
+start python .\BV.py 127.0.0.1 5000
+start python .\Robo_N.py 127.0.0.1 3000 127.0.0.1:5000
+start python .\Banco_N_HB.py 127.0.0.1 3500 127.0.0.1:3000
+start python .\Robo_N.py 127.0.0.1 4000 127.0.0.1:5000
+start python .\Banco_N_HB.py 127.0.0.1 4500 127.0.0.1:4000
