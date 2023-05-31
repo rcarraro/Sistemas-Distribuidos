@@ -1,8 +1,17 @@
+# Integrantes
+
+1 - Amanda de Sousa Martins           R.A: 22.120.004-1<br><br>
+2 - Kawê Vinicius Barboza de Carvalho R.A: 22.120.018-1<br><br>
+3 - Nicolas Moretti Trevizam          R.A: 22.120.011-6<br><br>
+4 - Rafael Carraro Martins            R.A: 22.120.025-6<br><br>
+
 # Simulação de uma Bolsa de Valores com Home Brokers
 
 Este projeto tem como objetivo simular uma bolsa de valores, fornecendo uma interface de usuário através de um sistema de home brokers.
 
 ## Instalação
+
+>Python superior ou igual à 3.7
 
 1. Clone este repositório para o seu ambiente local.
 
@@ -25,8 +34,52 @@ pip install -r requirements.txt
 
 1. Inicie a aplicação.
 
+Windows:
 ```
-Execute o run.bat ou run.sh
+Execute o run.bat
+```
+
+Linux, recomenda-se criar um serviço (systemd):
+
+Vá até o diretório correto
+```
+Ex: cd /etc/systemd/system
+```
+
+Crie o serviço:
+```
+nano nome_serviço.service
+```
+
+Adicione o seu serviço:
+```
+sudo systemctl daemon-reload
+```
+
+Dê um enable no seu serviço:
+```
+sudo systemctl enable nome_serviço.service
+```
+
+Basta dar o start agora:
+```
+sudo systemctl start nome_serviço.service
+```
+
+Preencha ele:
+```
+Ex:
+Description=Run
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=tempo_restart
+User=root
+ExecStart=sudo bash ./caminho_até_arquivo_git/run.sh
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 ### Mudanças possíveis
@@ -37,6 +90,9 @@ start python .\BV.py *ip* *porta*
 start python .\Robo_B.py *ip* *porta* *ip:porta(BV)*
 start python .\Banco_B_HB1.py *ip* *porta* *ip:porta(Robo)*
 ```
+
+>Vale lembrar que o número de robôs e homebrokers, pode ser aumentado infinitamente, basta seguir o padrão de ip e, não repetir nenhuma porta.
+
 Ex:
 
 ```
