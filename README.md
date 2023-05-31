@@ -5,9 +5,11 @@
 3 - Nicolas Moretti Trevizam          R.A: 22.120.011-6<br><br>
 4 - Rafael Carraro Martins            R.A: 22.120.025-6<br><br>
 
+# Testes realizados em ambiente *Windows*
 # Simulação de uma Bolsa de Valores com Home Brokers
 
-Este projeto tem como objetivo simular uma bolsa de valores, fornecendo uma interface de usuário através de um sistema de home brokers.
+Este projeto tem como objetivo simular uma bolsa de valores, fornecendo uma interface de usuário através de um sistema de home brokers.<br>
+
 
 ## Instalação
 
