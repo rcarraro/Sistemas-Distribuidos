@@ -205,3 +205,15 @@ solicitado ajuste de horario pelo 192.168.15.67:3500 diferenca:2
 solicitado ajuste de horario pelo 192.168.15.67:3500 diferenca:2
 solicitado ajuste de horario pelo 192.168.15.67:4500 diferenca:3
 solicitado ajuste de horario pelo 127.0.0.1:3500 diferenca:2
+solicitado ajuste de horario pelo 127.0.0.1:3500 diferenca:2
+solicitado ajuste de horario pelo 127.0.0.1:3500 diferenca:3
+solicitado ajuste de horario pelo 192.168.15.40:3500 diferenca:2
+solicitado ajuste de horario pelo 192.168.15.40:3500 diferenca:5
+solicitado ajuste de horario pelo 192.168.15.40:3500 diferenca:2
+solicitado ajuste de horario pelo 192.168.15.168:2500 diferenca:240
+solicitado ajuste de horario pelo 192.168.15.40:3500 diferenca:79
+solicitado ajuste de horario pelo 192.168.15.40:3500 diferenca:26
+solicitado ajuste de horario pelo 192.168.15.40:3500 diferenca:10
+solicitado ajuste de horario pelo 192.168.15.40:3500 diferenca:6
+solicitado ajuste de horario pelo 192.168.15.40:3500 diferenca:2
+solicitado ajuste de horario pelo 192.168.15.40:3500 diferenca:2
