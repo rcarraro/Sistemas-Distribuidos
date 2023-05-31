@@ -54,7 +54,7 @@ app = Flask(__name__)
 @app.route('/compra_acao/<valores>')
 def compra_acao(valores):
     global lista, acoes,horario_bolsa
-    #verificar horários
+    #verificar horarios
     soma = 0
     valores = valores.split("+")
     hora_split = (valores[2].split(":"))
@@ -69,7 +69,7 @@ def compra_acao(valores):
     # if(lista[f"{valores[0]}:{valores[1]}"] - diferenca >= 1 or diferenca-lista[f"{valores[0]}:{valores[1]}"] >= 1):
     if(diferenca > 1):
         arquivo = open("logs_horario.txt", "a")
-        texto_log = f"solicitado ajuste de horário pelo {valores[0]}:{valores[1]} diferenca:{diferenca}\n"
+        texto_log = f"solicitado ajuste de horario pelo {valores[0]}:{valores[1]} diferenca:{diferenca}\n"
         arquivo.write(texto_log)
         arquivo.close()
         for item in lista:
@@ -94,12 +94,12 @@ def compra_acao(valores):
     else:
         acao = valores[3]
         if(acoes[acao]['quantidade'] == 0):
-            return f"Estoque de ações {acao} finalizado, aguarde alguma venda"
+            return f"Estoque de acoes {acao} finalizado, aguarde alguma venda"
         else:
             arquivo = open("logs_compra.txt", "a")
             arquivo2 = open("valores_acao.txt", "a")
-            texto = f"Foi Comprada uma ação de {acao} pelo valor de {acoes[acao]['valor']}"
-            texto_log = f"{valores[0]}:{valores[1]} (diferenca:{diferenca}) Foi Comprada uma açao de {acao} pelo valor de {acoes[acao]['valor']} (Horário_Bolsa:{horario_bolsa};Horário_Banco:{horario_banco})\n"
+            texto = f"Foi Comprada uma acao de {acao} pelo valor de {acoes[acao]['valor']}"
+            texto_log = f"{valores[0]}:{valores[1]} (diferenca:{diferenca}) Foi Comprada uma acao de {acao} pelo valor de {acoes[acao]['valor']} (Horario_Bolsa:{horario_bolsa};Horario_Banco:{horario_banco})\n"
             texto_log2 = f"{acao} {acoes[acao]['valor']} {horario_bolsa}\n"
             arquivo.write(texto_log)
             arquivo2.write(texto_log2)
@@ -115,7 +115,7 @@ def compra_acao(valores):
 @app.route('/venda_acao/<valores>')
 def venda_acao(valores):
     global lista, acoes,horario_bolsa
-    #verificar horários
+    #verificar horarios
     soma = 0
     valores = valores.split("+")
     hora_split = (valores[2].split(":"))
@@ -129,7 +129,7 @@ def venda_acao(valores):
         diferenca = (horario_bolsa - horario_banco ).seconds
     if(diferenca > 1):
         arquivo = open("logs_horario.txt", "a")
-        texto_log = f"solicitado ajuste de horário pelo {valores[0]}:{valores[1]} diferenca:{diferenca}\n"
+        texto_log = f"solicitado ajuste de horario pelo {valores[0]}:{valores[1]} diferenca:{diferenca}\n"
         arquivo.write(texto_log)
         arquivo.close()
         for item in lista:
@@ -155,8 +155,8 @@ def venda_acao(valores):
         acao = valores[3]
         arquivo = open("logs_compra.txt", "a")
         arquivo2 = open("valores_acao.txt", "a")
-        texto = f"Foi vendida uma ação de {acao} pelo valor de {acoes[acao]['valor']}"
-        texto_log = f"{valores[0]}:{valores[1]} (diferenca:{diferenca}) Foi Vendida uma açao de {acao} pelo valor de {acoes[acao]['valor']} (Horário_Bolsa:{horario_bolsa};Horário_Banco:{horario_banco})\n"
+        texto = f"Foi vendida uma acao de {acao} pelo valor de {acoes[acao]['valor']}"
+        texto_log = f"{valores[0]}:{valores[1]} (diferenca:{diferenca}) Foi Vendida uma acao de {acao} pelo valor de {acoes[acao]['valor']} (Horario_Bolsa:{horario_bolsa};Horario_Banco:{horario_banco})\n"
         texto_log2 = f"{acao} {acoes[acao]['valor']} {horario_bolsa}\n"
         arquivo.write(texto_log)
         arquivo.close()

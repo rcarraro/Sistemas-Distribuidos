@@ -18,7 +18,7 @@ app = Flask(__name__)
 @app.route('/hora_errada')
 def hora_errada():
     print("hora_errada em algum homebroker")
-    print("Enviando o horário")
+    print("Enviando o horario")
     return {"hora":horario.strftime('%H:%M:%S')}
 
 @app.route("/acao", methods=["POST"])
@@ -76,32 +76,32 @@ def compra_acao(host, porta):
             chaves = list(acoes_bolsa.keys()) 
             chave_aleatória = random.choice(chaves)
             if int(acoes_bolsa[chave_aleatória]['quantidade']) == 0:
-                print("estoque de ações zerado para essa")
+                print("estoque de acoes zerado para essa")
             else:
                 var = requests.get(f"http://{ip_hb}/compra_acao/{host}+{porta}+{horario.strftime('%H:%M:%S')}+{chave_aleatória}")
                 if var.text == "fix":
-                    print("Erro na compra de ação")
+                    print("Erro na compra de acao")
                 elif(var.text.find("Estoque") != -1):
-                    print("O estoque de ações que você tentou comprar estava esgotado")
+                    print("O estoque de acoes que voce tentou comprar estava esgotado")
                 else:
                     try:
                         acoes[var.text] = acoes[var.text] + 1
                     except:    
                         acoes[var.text] = 1
-                    print(f"Você comprou uma ação da {var.text}")
+                    print(f"Voce comprou uma acao da {var.text}")
         else:
             chaves = list(acoes.keys()) 
             chave_aleatória = random.choice(chaves)
             if(acoes[chave_aleatória] == 0 ):
-                print("Você não possui ações dessas para vender.")
+                print("Voce nao possui acoes dessas para vender.")
                 del acoes[chave_aleatória] 
             else:
                 var = requests.get(f"http://{ip_hb}/venda_acao/{host}+{porta}+{horario.strftime('%H:%M:%S')}+{chave_aleatória}")
                 if var.text == "-1":
-                    print(f"vendeu uma ação {chave_aleatória}")   
+                    print(f"vendeu uma acao {chave_aleatória}")   
                     acoes[chave_aleatória] = acoes[chave_aleatória] - 1
                 else:
-                    print("Erro na venda de ação")
+                    print("Erro na venda de acao")
 
 if __name__ == "__main__":
     adicionar_bv(ip,porta)
