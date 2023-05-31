@@ -58,7 +58,7 @@ Description=Run
 StartLimitIntervalSec=0
 [Service]
 User=root
-ExecStart=python /caminho/Robo_N.py 
+ExecStart=python /caminho/Robo_N.py *ip* *porta* *ip:porta(BV)*
 
 [Install]
 WantedBy=multi-user.target
