@@ -34,8 +34,52 @@ pip install -r requirements.txt
 
 1. Inicie a aplicação.
 
+Windows:
 ```
-Execute o run.bat ou run.sh
+Execute o run.bat
+```
+
+Linux, recomenda-se criar um serviço (systemd):
+
+Vá até o diretório correto
+```
+Ex: cd /etc/systemd/system
+```
+
+Crie o serviço:
+```
+nano nome_serviço.service
+```
+
+Adicione o seu serviço:
+```
+sudo systemctl daemon-reload
+```
+
+Dê um enable no seu serviço:
+```
+sudo systemctl enable nome_serviço.service
+```
+
+Basta dar o start agora:
+```
+sudo systemctl start nome_serviço.service
+```
+
+Preencha ele:
+```
+Ex:
+Description=Run
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=tempo_restart
+User=root
+ExecStart=sudo bash ./caminho_até_arquivo_git/run.sh
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 ### Mudanças possíveis
