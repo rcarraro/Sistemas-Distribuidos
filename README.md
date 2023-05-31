@@ -11,6 +11,8 @@ Este projeto tem como objetivo simular uma bolsa de valores, fornecendo uma inte
 
 ## Instalação
 
+>Python superior ou igual à 3.7
+
 1. Clone este repositório para o seu ambiente local.
 
 ```
