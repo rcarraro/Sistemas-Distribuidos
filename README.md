@@ -39,9 +39,13 @@ Windows:
 Execute o run.bat
 ```
 <br>
-Linux, recomenda-se criar um serviço (systemd):
+Linux:
 
-Vá até o diretório correto
+```
+Execute o run.sh
+```
+
+Ou vá até o diretório correto
 ```
 Ex: cd /etc/systemd/system
 ```
