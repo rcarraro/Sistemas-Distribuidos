@@ -38,7 +38,7 @@ Windows:
 ```
 Execute o run.bat
 ```
-
+<br>
 Linux, recomenda-se criar um serviço (systemd):
 
 Vá até o diretório correto
@@ -49,21 +49,6 @@ Ex: cd /etc/systemd/system
 Crie o serviço:
 ```
 nano nome_serviço.service
-```
-
-Adicione o seu serviço:
-```
-sudo systemctl daemon-reload
-```
-
-Dê um enable no seu serviço:
-```
-sudo systemctl enable nome_serviço.service
-```
-
-Basta dar o start agora:
-```
-sudo systemctl start nome_serviço.service
 ```
 
 Preencha ele:
@@ -80,6 +65,21 @@ ExecStart=sudo bash ./caminho_até_arquivo_git/run.sh
 
 [Install]
 WantedBy=multi-user.target
+```
+
+Adicione o seu serviço:
+```
+sudo systemctl daemon-reload
+```
+
+Dê um enable no seu serviço:
+```
+sudo systemctl enable nome_serviço.service
+```
+
+Basta dar o start agora:
+```
+sudo systemctl start nome_serviço.service
 ```
 
 ### Mudanças possíveis
