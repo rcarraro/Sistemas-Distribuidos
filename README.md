@@ -51,19 +51,23 @@ Crie o serviço:
 nano nome_serviço.service
 ```
 
-Preencha ele:
+Preencha ele para o robo, banco e BV:
 ```
 Ex:
 Description=Run
 StartLimitIntervalSec=0
 [Service]
 User=root
-ExecStart=sudo bash ./caminho_até_arquivo_git/run.sh
+ExecStart=python /caminho/Robo_B.py 
 
 [Install]
 WantedBy=multi-user.target
 ```
->Vale lembrar que tem que arrumar o caminho dos arquivos python também
+>Seguindo os padrões:
+>python /caminho/BV.py *ip* *porta*
+>python /caminho/Robo_B.py *ip* *porta* *ip:porta(BV)*
+>python /caminho/Banco_B_HB1.py *ip* *porta* *ip:porta(Robo)*
+
 
 Adicione o seu serviço:
 ```
