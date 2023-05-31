@@ -67,6 +67,7 @@ WantedBy=multi-user.target
 >python /caminho/BV.py *ip* *porta*<br>
 >python /caminho/Robo_B.py *ip* *porta* *ip:porta(BV)*<br>
 >python /caminho/Banco_B_HB1.py *ip* *porta* *ip:porta(Robo)*<br>
+>lembre-se de rodar antes a BV, depois o Robo e por fim o Banco.
 
 
 Adicione o seu serviço:
