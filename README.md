@@ -63,10 +63,10 @@ ExecStart=python /caminho/Robo_B.py
 [Install]
 WantedBy=multi-user.target
 ```
->Seguindo os padrões:
->python /caminho/BV.py *ip* *porta*
->python /caminho/Robo_B.py *ip* *porta* *ip:porta(BV)*
->python /caminho/Banco_B_HB1.py *ip* *porta* *ip:porta(Robo)*
+>Seguindo os padrões:<br>
+>python /caminho/BV.py *ip* *porta*<br>
+>python /caminho/Robo_B.py *ip* *porta* *ip:porta(BV)*<br>
+>python /caminho/Banco_B_HB1.py *ip* *porta* *ip:porta(Robo)*<br>
 
 
 Adicione o seu serviço:
