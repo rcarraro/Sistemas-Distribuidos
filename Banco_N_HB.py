@@ -42,7 +42,7 @@ def ajuste_hora(valor):
     global horario
     hora_split = valor.split(":")
     horario = horario.replace(hour=int(hora_split[0]), minute=int(hora_split[1]), second=int(hora_split[2]))
-    return "ajustou a hora do banco B"
+    return "ajustou a hora do banco"
 
 def adicionar_bv(host,porta):
     texto = str(host)+","+str(porta)+","+horario.strftime("%H:%M:%S")
