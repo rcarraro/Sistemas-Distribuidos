@@ -17,7 +17,7 @@ start python .\Robo_N.py 192.168.15.40 3500 192.168.15.40:5000
 start python .\Banco_N_HB.py 192.168.15.40 3000 192.168.15.40:3500
 ```
 
-Máquina 2 (Winodws):
+Máquina 2 (Windows):
 ```
 start python .\Robo_N.py 192.168.15.168 2500 192.168.15.40:5000
 start python .\Banco_N_HB.py 192.168.15.168 2000 192.168.15.168:2500
