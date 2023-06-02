@@ -9,7 +9,7 @@
 
 Como demonstrado nas logs de compra, o ip das solicitações é diferente<br>
 Maneira como foi ajustada:<br>
-Máquina 1 (Winodws):
+Máquina 1 (Windows):
 ```
 pip install -r .\requirements.txt
 start python .\BV.py 192.168.15.40 5000
