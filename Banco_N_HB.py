@@ -24,7 +24,6 @@ def hora_errada():
 @app.route("/acao", methods=["POST"])
 def test():
     global acoes_bolsa
-    print("entrou")
     acoes_bolsa = json.loads((request.data).decode())
     return ""
 
